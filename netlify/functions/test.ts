@@ -14,7 +14,7 @@ const handler: Handler = async (event, context) => {
 		}
 	`;
 
-	request("https://api.spacex.land/graphql/", query).then((data: any) => {
+	await request("https://api.spacex.land/graphql/", query).then((data: any) => {
 		console.log(data)
 		return {
 			statusCode: 200,
