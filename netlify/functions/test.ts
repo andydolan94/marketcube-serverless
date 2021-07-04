@@ -14,17 +14,15 @@ const handler: Handler = async (event, context) => {
 		}
 	`;
 
+	let requestData = "Hello World";
+
 	await request("https://api.spacex.land/graphql/", query).then((data: any) => {
-		console.log(data)
-		return {
-			statusCode: 200,
-			body: JSON.stringify(data)
-		}
+		requestData = data;
 	});
 
 	return {
 		statusCode: 200,
-		body: JSON.stringify({ message: "Hello World" }),
+		body: JSON.stringify({ message: requestData }),
 	};
 };
 
