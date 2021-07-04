@@ -1,0 +1,11 @@
+{
+	"name": "marketcube_serverless",
+	"version": "1.0.0",
+	"description": "A reverse proxy for Marketcube that utilises GraphQL",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Andrew Dolan",
+	"license": "ISC"
+}
