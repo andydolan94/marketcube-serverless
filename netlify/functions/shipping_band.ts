@@ -6,6 +6,7 @@ const handler: Handler = async (event, context) => {
 
 	const graphQLClient = new GraphQLClient(endpoint, {
 		headers: {
+			"Content-Type": "application/json",
 			token: process.env.MARKETCUBE_GRAPHQL_TOKEN!,
 		},
 	});
