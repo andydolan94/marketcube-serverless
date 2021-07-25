@@ -14,11 +14,13 @@ const handler: Handler = async (event, context) => {
 		}
 	`;
 
-	let requestData = "Hello World";
+	let requestData = "No data found";
 
-	await request("https://api.spacex.land/graphql/", query).then((data: any) => {
-		requestData = data;
-	});
+	await request("https://api.spacex.land/graphql/", query)
+		.then((data: any) => {
+			requestData = data;
+		})
+		.catch((err) => (requestData = err));
 
 	return {
 		statusCode: 200,
