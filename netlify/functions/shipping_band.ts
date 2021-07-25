@@ -49,7 +49,7 @@ const handler: Handler = async (event, context) => {
 
 	return {
 		statusCode: 200,
-		body: JSON.stringify({ message: requestData }),
+		body: requestData,
 	};
 };
 
